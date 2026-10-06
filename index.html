@@ -46,14 +46,15 @@
     </svg>
 
     <div class="intro-text">
-      <p class="intro-kicker" id="introKicker">Бір уыс жүн…</p>
-      <h1 class="intro-title" id="introTitle">Жүннен — киізге</h1>
+      <p class="intro-kicker" id="introKicker" data-i18n="intro.kicker">Бір уыс жүн…</p>
+      <h1 class="intro-title" id="introTitle" data-i18n="intro.title">Жүннен — киізге</h1>
       <button class="intro-btn" id="introBtn" type="button">
-        <span>Басу</span>
-        <small>немесе күте тұрыңыз</small>
+        <span data-i18n="intro.btn">Басу</span>
+        <small data-i18n="intro.wait">немесе күте тұрыңыз</small>
       </button>
     </div>
-    <button class="intro-skip" id="introSkip" type="button">Өткізіп жіберу →</button>
+    <div class="lang lang-intro" role="group" aria-label="Тіл / Язык"><button type="button" data-lang="kk">ҚАЗ</button><button type="button" data-lang="ru">РУС</button></div>
+    <button class="intro-skip" id="introSkip" type="button" data-i18n="intro.skip">Өткізіп жіберу →</button>
   </div>
 
   <!-- ============ HEADER ============ -->
@@ -64,16 +65,17 @@
         <span>Ақ Киіз</span>
       </a>
       <nav class="nav" id="nav">
-        <a href="#about">Киіз туралы</a>
-        <a href="#process">Қалай жасалады</a>
-        <a href="#products">Бұйымдар</a>
-        <a href="#contact">Байланыс</a>
+        <a href="#about" data-i18n="nav.about">Киіз туралы</a>
+        <a href="#process" data-i18n="nav.process">Қалай жасалады</a>
+        <a href="#products" data-i18n="nav.products">Бұйымдар</a>
+        <a href="#contact" data-i18n="nav.contact">Байланыс</a>
       </nav>
+      <div class="lang" role="group" aria-label="Тіл / Язык"><button type="button" data-lang="kk">ҚАЗ</button><button type="button" data-lang="ru">РУС</button></div>
       <a class="btn btn-wa btn-sm header-cta" data-wa href="#" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
         WhatsApp
       </a>
-      <button class="burger" id="burger" aria-label="Мәзір"><span></span><span></span></button>
+      <button class="burger" id="burger" aria-label="Мәзір" data-i18n-aria="menu"><span></span><span></span></button>
     </div>
   </header>
 
@@ -88,15 +90,15 @@
 
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow reveal">Үй жағдайында · қолмен · таза жүннен</p>
-          <h2 class="hero-title reveal">Ата-бабадан қалған <em>киіз басу</em> өнері — сіздің үйіңізде</h2>
-          <p class="hero-sub reveal">Әр киіз таза қой жүнінен дәстүрлі тәсілмен басылады. Жылы, табиғи, ұзаққа шыдайды — және әрқайсысы бірегей.</p>
+          <p class="eyebrow reveal" data-i18n="hero.eyebrow">Үй жағдайында · қолмен · таза жүннен</p>
+          <h2 class="hero-title reveal" data-i18n="hero.title">Ата-бабадан қалған <em>киіз басу</em> өнері — сіздің үйіңізде</h2>
+          <p class="hero-sub reveal" data-i18n="hero.sub">Әр киіз таза қой жүнінен дәстүрлі тәсілмен басылады. Жылы, табиғи, ұзаққа шыдайды — және әрқайсысы бірегей.</p>
           <div class="hero-actions reveal">
             <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
-              WhatsApp-қа жазу
+              <span data-i18n="hero.wa">WhatsApp-қа жазу</span>
             </a>
-            <a class="btn btn-ghost" href="#products">Бұйымдарды көру</a>
+            <a class="btn btn-ghost" href="#products" data-i18n="hero.more">Бұйымдарды көру</a>
           </div>
           <a class="hero-phone reveal" data-phone="0" href="#">+7 (700) 000-00-00</a>
         </div>
@@ -104,7 +106,7 @@
         <div class="hero-art reveal">
           <div class="felt-card" id="heroFelt">
             <div class="felt-pattern" data-pattern="red"></div>
-            <span class="felt-tag">Текемет · 100% жүн</span>
+            <span class="felt-tag" data-i18n="hero.tag">Текемет · 100% жүн</span>
           </div>
         </div>
       </div>
@@ -123,20 +125,20 @@
     <section class="section about" id="about">
       <div class="container about-grid">
         <div class="about-copy">
-          <p class="eyebrow reveal">Киіз деген не?</p>
-          <h2 class="section-title reveal">Жүн талшықтары бір-біріне <em>жабысқанша</em> басылған тығыз мата</h2>
-          <p class="reveal">Киіз — жүннен арнайы тәсілмен алынатын тығыз материал. Жүнді жайып, ылғалдап, талшықтар өзара жабысып, біртұтас болғанша басады.</p>
-          <p class="reveal">Киіз басу — қазақтың ежелгі қолөнері. Ол киіз үйдің жабуы да, төсеніш те, жылы киім де болған. Біз сол дәстүрді сақтап, бүгінгі үйге лайық бұйымдар жасаймыз.</p>
+          <p class="eyebrow reveal" data-i18n="about.eyebrow">Киіз деген не?</p>
+          <h2 class="section-title reveal" data-i18n="about.title">Жүн талшықтары бір-біріне <em>жабысқанша</em> басылған тығыз мата</h2>
+          <p class="reveal" data-i18n="about.p1">Киіз — жүннен арнайы тәсілмен алынатын тығыз материал. Жүнді жайып, ылғалдап, талшықтар өзара жабысып, біртұтас болғанша басады.</p>
+          <p class="reveal" data-i18n="about.p2">Киіз басу — қазақтың ежелгі қолөнері. Ол киіз үйдің жабуы да, төсеніш те, жылы киім де болған. Біз сол дәстүрді сақтап, бүгінгі үйге лайық бұйымдар жасаймыз.</p>
           <ul class="facts reveal">
-            <li><b>100%</b><span>табиғи қой жүні</span></li>
-            <li><b>Қолмен</b><span>әр бұйым үйде жасалады</span></li>
-            <li><b>Бірегей</b><span>екі бірдей өрнек жоқ</span></li>
+            <li><b>100%</b><span data-i18n="about.f1">табиғи қой жүні</span></li>
+            <li><b data-i18n="about.f2b">Қолмен</b><span data-i18n="about.f2">әр бұйым үйде жасалады</span></li>
+            <li><b data-i18n="about.f3b">Бірегей</b><span data-i18n="about.f3">екі бірдей өрнек жоқ</span></li>
           </ul>
         </div>
         <div class="about-art reveal">
           <div class="macro">
             <svg viewBox="0 0 300 300" id="macroFibers" aria-hidden="true"></svg>
-            <span class="macro-label">Жүн талшықтары жақыннан</span>
+            <span class="macro-label" data-i18n="about.macro">Жүн талшықтары жақыннан</span>
           </div>
         </div>
       </div>
@@ -145,40 +147,40 @@
     <!-- ============ PROCESS ============ -->
     <section class="section process" id="process">
       <div class="container">
-        <p class="eyebrow reveal center">Қалай жасалады</p>
-        <h2 class="section-title reveal center">Бес қадам: жүннен киізге дейін</h2>
+        <p class="eyebrow reveal center" data-i18n="process.eyebrow">Қалай жасалады</p>
+        <h2 class="section-title reveal center" data-i18n="process.title">Бес қадам: жүннен киізге дейін</h2>
 
         <ol class="steps" id="steps">
           <span class="steps-line"><span class="steps-fill" id="stepsFill"></span></span>
           <li class="step reveal">
             <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-1"/></svg></div>
             <span class="step-n">01</span>
-            <h3>Жүнді сабау</h3>
-            <p>Жуылған жүнді сабаумен сабап, қопсытамыз — талшықтар жеңіл әрі біркелкі болады.</p>
+            <h3 data-i18n="step1.h">Жүнді сабау</h3>
+            <p data-i18n="step1.p">Жуылған жүнді сабаумен сабап, қопсытамыз — талшықтар жеңіл әрі біркелкі болады.</p>
           </li>
           <li class="step reveal">
             <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-2"/></svg></div>
             <span class="step-n">02</span>
-            <h3>Шиге жаю</h3>
-            <p>Шиге жүнді қабат-қабат жайып, түрлі түсті жүннен өрнек саламыз.</p>
+            <h3 data-i18n="step2.h">Шиге жаю</h3>
+            <p data-i18n="step2.p">Шиге жүнді қабат-қабат жайып, түрлі түсті жүннен өрнек саламыз.</p>
           </li>
           <li class="step reveal">
             <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-3"/></svg></div>
             <span class="step-n">03</span>
-            <h3>Ыстық су себу</h3>
-            <p>Жүнді ыстық сумен ылғалдаймыз — талшықтар жұмсарып, бір-біріне ілінісе бастайды.</p>
+            <h3 data-i18n="step3.h">Ыстық су себу</h3>
+            <p data-i18n="step3.p">Жүнді ыстық сумен ылғалдаймыз — талшықтар жұмсарып, бір-біріне ілінісе бастайды.</p>
           </li>
           <li class="step reveal">
             <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-4"/></svg></div>
             <span class="step-n">04</span>
-            <h3>Орап, басу</h3>
-            <p>Шиге орап, ұзақ домалатып, тептеп басамыз. Жүн тығыздалып, киізге айналады.</p>
+            <h3 data-i18n="step4.h">Орап, басу</h3>
+            <p data-i18n="step4.p">Шиге орап, ұзақ домалатып, тептеп басамыз. Жүн тығыздалып, киізге айналады.</p>
           </li>
           <li class="step reveal">
             <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-5"/></svg></div>
             <span class="step-n">05</span>
-            <h3>Кептіру</h3>
-            <p>Күнге кептіріп, шеттерін тегістейміз. Киіз дайын — ұзақ жылдар қызмет етеді.</p>
+            <h3 data-i18n="step5.h">Кептіру</h3>
+            <p data-i18n="step5.p">Күнге кептіріп, шеттерін тегістейміз. Киіз дайын — ұзақ жылдар қызмет етеді.</p>
           </li>
         </ol>
       </div>
@@ -187,59 +189,59 @@
     <!-- ============ PRODUCTS ============ -->
     <section class="section products" id="products">
       <div class="container">
-        <p class="eyebrow reveal center">Бұйымдар</p>
-        <h2 class="section-title reveal center">Үйіңізге жылулық пен дәстүр</h2>
-        <p class="section-lead reveal center">Өлшемі, түсі мен өрнегі тапсырыс бойынша. Бағасын WhatsApp-та нақтылаймыз.</p>
+        <p class="eyebrow reveal center" data-i18n="products.eyebrow">Бұйымдар</p>
+        <h2 class="section-title reveal center" data-i18n="products.title">Үйіңізге жылулық пен дәстүр</h2>
+        <p class="section-lead reveal center" data-i18n="products.lead">Өлшемі, түсі мен өрнегі тапсырыс бойынша. Бағасын WhatsApp-та нақтылаймыз.</p>
 
         <div class="grid" id="productGrid">
           <article class="card reveal">
             <div class="card-art"><div class="felt-pattern" data-pattern="red"></div></div>
             <div class="card-body">
-              <h3>Текемет</h3>
-              <p>Өрнегі басылып салынған үлкен киіз кілем. Еденге, төрге жарасады.</p>
-              <a class="card-link" data-wa-product="Текемет" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+              <h3 data-i18n="card1.h">Текемет</h3>
+              <p data-i18n="card1.p">Өрнегі басылып салынған үлкен киіз кілем. Еденге, төрге жарасады.</p>
+              <a class="card-link" data-wa-product="Текемет" href="#" target="_blank" rel="noopener" data-i18n="products.order">Тапсырыс беру →</a>
             </div>
           </article>
           <article class="card reveal">
             <div class="card-art"><div class="felt-pattern" data-pattern="blue"></div></div>
             <div class="card-body">
-              <h3>Сырмақ</h3>
-              <p>Ою-өрнегі қиылып, тігіліп жасалған сәнді киіз. Ұзаққа шыдайды.</p>
-              <a class="card-link" data-wa-product="Сырмақ" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+              <h3 data-i18n="card2.h">Сырмақ</h3>
+              <p data-i18n="card2.p">Ою-өрнегі қиылып, тігіліп жасалған сәнді киіз. Ұзаққа шыдайды.</p>
+              <a class="card-link" data-wa-product="Сырмақ" href="#" target="_blank" rel="noopener" data-i18n="products.order">Тапсырыс беру →</a>
             </div>
           </article>
           <article class="card reveal">
             <div class="card-art"><div class="felt-pattern" data-pattern="ochre"></div></div>
             <div class="card-body">
-              <h3>Киіз кілемше</h3>
-              <p>Кіреберіске, балалар бөлмесіне, намазға арналған шағын төсеніш.</p>
-              <a class="card-link" data-wa-product="Киіз кілемше" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+              <h3 data-i18n="card3.h">Киіз кілемше</h3>
+              <p data-i18n="card3.p">Кіреберіске, балалар бөлмесіне, намазға арналған шағын төсеніш.</p>
+              <a class="card-link" data-wa-product="Киіз кілемше" href="#" target="_blank" rel="noopener" data-i18n="products.order">Тапсырыс беру →</a>
             </div>
           </article>
           <article class="card reveal">
             <div class="card-art"><div class="felt-pattern" data-pattern="cream"></div></div>
             <div class="card-body">
-              <h3>Киіз тәпішке</h3>
-              <p>Үйде киетін жылы, жеңіл аяқ киім. Аяқты суықтан сақтайды.</p>
-              <a class="card-link" data-wa-product="Киіз тәпішке" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+              <h3 data-i18n="card4.h">Киіз тәпішке</h3>
+              <p data-i18n="card4.p">Үйде киетін жылы, жеңіл аяқ киім. Аяқты суықтан сақтайды.</p>
+              <a class="card-link" data-wa-product="Киіз тәпішке" href="#" target="_blank" rel="noopener" data-i18n="products.order">Тапсырыс беру →</a>
             </div>
           </article>
           <article class="card reveal">
             <div class="card-art"><div class="felt-pattern" data-pattern="dark"></div></div>
             <div class="card-body">
-              <h3>Қабырға безендіру</h3>
-              <p>Ою-өрнекті киіз панно — қонақ бөлмеге ұлттық нақыш береді.</p>
-              <a class="card-link" data-wa-product="Қабырға безендіру" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+              <h3 data-i18n="card5.h">Қабырға безендіру</h3>
+              <p data-i18n="card5.p">Ою-өрнекті киіз панно — қонақ бөлмеге ұлттық нақыш береді.</p>
+              <a class="card-link" data-wa-product="Қабырға безендіру" href="#" target="_blank" rel="noopener" data-i18n="products.order">Тапсырыс беру →</a>
             </div>
           </article>
           <article class="card card-custom reveal">
             <div class="card-body">
               <svg class="card-custom-ic" viewBox="0 0 40 40" aria-hidden="true"><use href="#orn-horn"/></svg>
-              <h3>Өз идеяңыз бойынша</h3>
-              <p>Өлшемін, түсін, өрнегін айтыңыз — сіз үшін арнайы басып береміз. Сыйлыққа да таптырмайды.</p>
+              <h3 data-i18n="card6.h">Өз идеяңыз бойынша</h3>
+              <p data-i18n="card6.p">Өлшемін, түсін, өрнегін айтыңыз — сіз үшін арнайы басып береміз. Сыйлыққа да таптырмайды.</p>
               <a class="btn btn-wa" data-wa-product="Жеке тапсырыс" href="#" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
-                Идеяны жіберу
+                <span data-i18n="products.send">Идеяны жіберу</span>
               </a>
             </div>
           </article>
@@ -250,10 +252,10 @@
     <!-- ============ WHY ============ -->
     <section class="section why">
       <div class="container why-grid">
-        <div class="why-item reveal"><span class="why-n">01</span><h3>Табиғи</h3><p>Тек таза қой жүні, химиясыз.</p></div>
-        <div class="why-item reveal"><span class="why-n">02</span><h3>Жылы</h3><p>Жылуды жақсы сақтайды, еденнен суық өткізбейді.</p></div>
-        <div class="why-item reveal"><span class="why-n">03</span><h3>Берік</h3><p>Дұрыс күтімде ондаған жыл қызмет етеді.</p></div>
-        <div class="why-item reveal"><span class="why-n">04</span><h3>Бірегей</h3><p>Әр бұйым қолмен жасалады, қайталанбайды.</p></div>
+        <div class="why-item reveal"><span class="why-n">01</span><h3 data-i18n="why1.h">Табиғи</h3><p data-i18n="why1.p">Тек таза қой жүні, химиясыз.</p></div>
+        <div class="why-item reveal"><span class="why-n">02</span><h3 data-i18n="why2.h">Жылы</h3><p data-i18n="why2.p">Жылуды жақсы сақтайды, еденнен суық өткізбейді.</p></div>
+        <div class="why-item reveal"><span class="why-n">03</span><h3 data-i18n="why3.h">Берік</h3><p data-i18n="why3.p">Дұрыс күтімде ондаған жыл қызмет етеді.</p></div>
+        <div class="why-item reveal"><span class="why-n">04</span><h3 data-i18n="why4.h">Бірегей</h3><p data-i18n="why4.p">Әр бұйым қолмен жасалады, қайталанбайды.</p></div>
       </div>
     </section>
 
@@ -262,13 +264,13 @@
       <div class="container">
         <div class="contact-card reveal">
           <div class="contact-copy">
-            <p class="eyebrow light">Байланыс</p>
-            <h2 class="section-title light">Тапсырыс беру оңай</h2>
-            <p>WhatsApp-қа жазыңыз немесе қоңырау шалыңыз. Өлшемі, түсі, мерзімі мен бағасын бірге келісеміз. Қазақстан бойынша жеткізу бар.</p>
+            <p class="eyebrow light" data-i18n="contact.eyebrow">Байланыс</p>
+            <h2 class="section-title light" data-i18n="contact.title">Тапсырыс беру оңай</h2>
+            <p data-i18n="contact.text">WhatsApp-қа жазыңыз немесе қоңырау шалыңыз. Өлшемі, түсі, мерзімі мен бағасын бірге келісеміз. Қазақстан бойынша жеткізу бар.</p>
             <ul class="phones" id="phones"></ul>
             <a class="btn btn-wa btn-lg" data-wa href="#" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
-              WhatsApp арқылы жазу
+              <span data-i18n="contact.wa">WhatsApp арқылы жазу</span>
             </a>
           </div>
           <div class="contact-art" aria-hidden="true">
@@ -286,12 +288,12 @@
         <svg viewBox="0 0 40 40" aria-hidden="true"><use href="#orn-horn"/></svg>
         <span>Ақ Киіз</span>
       </span>
-      <p>Қолдан басылған қазақ киізі · <span id="year"></span></p>
+      <p><span data-i18n="footer.text">Қолдан басылған қазақ киізі</span> · <span id="year"></span></p>
     </div>
   </footer>
 
   <!-- Қалқымалы WhatsApp батырмасы -->
-  <a class="wa-float" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp-қа жазу">
+  <a class="wa-float" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp-қа жазу" data-i18n-aria="hero.wa">
     <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
   </a>
 

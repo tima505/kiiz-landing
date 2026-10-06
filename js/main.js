@@ -14,13 +14,158 @@ const CONFIG = {
     "+7 (701) 000-00-00",
   ],
 
-  // Текст, который автоматически появится в WhatsApp
-  waMessage: "Сәлеметсіз бе! Киіз бұйымдарына тапсырыс бергім келеді.",
-  waProductMessage: (name) => `Сәлеметсіз бе! Мені «${name}» қызықтырады. Бағасы мен өлшемін айтып жібересіз бе?`,
+  // Текст, который автоматически появится в WhatsApp (kk — казахский, ru — русский)
+  waMessage: {
+    kk: "Сәлеметсіз бе! Киіз бұйымдарына тапсырыс бергім келеді.",
+    ru: "Здравствуйте! Хочу заказать изделия из войлока.",
+  },
+  waProductMessage: {
+    kk: (name) => `Сәлеметсіз бе! Мені «${name}» қызықтырады. Бағасы мен өлшемін айтып жібересіз бе?`,
+    ru: (name) => `Здравствуйте! Меня интересует «${name}». Подскажете цену и размеры?`,
+  },
 
   // Интро: через сколько мс шерсть сама превратится в киіз, если не нажали
   introAutoMs: 3600,
 };
+
+/* ==========================================================
+   ТІЛДЕР / ЯЗЫКИ
+   Основной язык — казахский (тексты прямо в index.html).
+   Ниже — русский перевод: русский текст правьте здесь,
+   казахский — в index.html.
+   ========================================================== */
+const I18N = {
+  ru: {
+    "meta.title": "Ақ Киіз — казахский войлок ручной работы",
+    "meta.desc": "Изделия из чистой овечьей шерсти, свалянные вручную: текемет, сырмак, коврики, тапочки. Заказ через WhatsApp.",
+
+    "intro.kicker": "Горсть шерсти…",
+    "intro.title": "Из шерсти — в войлок",
+    "intro.btn": "Валять",
+    "intro.wait": "или подождите",
+    "intro.skip": "Пропустить →",
+    "intro.press.k": "Поливаем водой, валяем…",
+    "intro.press.t": "Волокна сцепляются",
+    "intro.felt.k": "Традиционный казахский киіз",
+    "intro.felt.t": "Вот и войлок готов!",
+
+    "nav.about": "О войлоке",
+    "nav.process": "Как делается",
+    "nav.products": "Изделия",
+    "nav.contact": "Контакты",
+    "menu": "Меню",
+
+    "hero.eyebrow": "Дома · вручную · из чистой шерсти",
+    "hero.title": "Искусство <em>валяния киіза</em>, доставшееся от предков, — в вашем доме",
+    "hero.sub": "Каждый киіз валяется из чистой овечьей шерсти традиционным способом. Тёплый, натуральный, долговечный — и каждый неповторим.",
+    "hero.wa": "Написать в WhatsApp",
+    "hero.more": "Смотреть изделия",
+    "hero.tag": "Текемет · 100% шерсть",
+
+    "about.eyebrow": "Что такое киіз?",
+    "about.title": "Плотное полотно, свалянное, пока волокна шерсти <em>не сцепятся</em> друг с другом",
+    "about.p1": "Киіз (войлок) — плотный материал, который получают из шерсти особым способом. Шерсть раскладывают, увлажняют и валяют, пока волокна не сцепятся в единое целое.",
+    "about.p2": "Валяние киіза — древнее казахское ремесло. Из него делали покрытие для юрты, подстилки и тёплую одежду. Мы сохраняем эту традицию и создаём изделия для современного дома.",
+    "about.f1": "натуральная овечья шерсть",
+    "about.f2b": "Вручную",
+    "about.f2": "каждое изделие делается дома",
+    "about.f3b": "Уникально",
+    "about.f3": "нет двух одинаковых узоров",
+    "about.macro": "Волокна шерсти крупным планом",
+
+    "process.eyebrow": "Как делается",
+    "process.title": "Пять шагов: от шерсти до войлока",
+    "step1.h": "Взбиваем шерсть",
+    "step1.p": "Мытую шерсть взбиваем прутьями — волокна становятся лёгкими и равномерными.",
+    "step2.h": "Раскладываем на чий",
+    "step2.p": "Слой за слоем раскладываем шерсть на циновке-чий и выкладываем узор из цветной шерсти.",
+    "step3.h": "Поливаем горячей водой",
+    "step3.p": "Увлажняем шерсть горячей водой — волокна размягчаются и начинают сцепляться.",
+    "step4.h": "Скатываем и валяем",
+    "step4.p": "Сворачиваем в чий, долго катаем и уплотняем. Шерсть сбивается и превращается в киіз.",
+    "step5.h": "Сушим",
+    "step5.p": "Сушим на солнце и выравниваем края. Киіз готов — он прослужит долгие годы.",
+
+    "products.eyebrow": "Изделия",
+    "products.title": "Тепло и традиции для вашего дома",
+    "products.lead": "Размер, цвет и узор — на заказ. Цену уточним в WhatsApp.",
+    "products.order": "Заказать →",
+    "products.send": "Отправить идею",
+    "card1.h": "Текемет",
+    "card1.p": "Большой войлочный ковёр с вваленным узором. Хорош на полу и на почётном месте.",
+    "card2.h": "Сырмак",
+    "card2.p": "Нарядный войлок с вырезанным и прошитым орнаментом. Очень долговечный.",
+    "card3.h": "Войлочный коврик",
+    "card3.p": "Небольшая подстилка для прихожей, детской или для намаза.",
+    "card4.h": "Войлочные тапочки",
+    "card4.p": "Тёплая и лёгкая домашняя обувь. Бережёт ноги от холода.",
+    "card5.h": "Декор для стены",
+    "card5.p": "Войлочное панно с орнаментом — добавит гостиной национальный колорит.",
+    "card6.h": "По вашей идее",
+    "card6.p": "Расскажите размер, цвет и узор — свалям специально для вас. Отличный подарок.",
+
+    "why1.h": "Натурально", "why1.p": "Только чистая овечья шерсть, без химии.",
+    "why2.h": "Тепло", "why2.p": "Хорошо держит тепло и не пропускает холод от пола.",
+    "why3.h": "Прочно", "why3.p": "При правильном уходе служит десятки лет.",
+    "why4.h": "Уникально", "why4.p": "Каждое изделие сделано вручную и не повторяется.",
+
+    "contact.eyebrow": "Контакты",
+    "contact.title": "Заказать просто",
+    "contact.text": "Напишите в WhatsApp или позвоните. Вместе обсудим размер, цвет, сроки и цену. Есть доставка по Казахстану.",
+    "contact.wa": "Написать в WhatsApp",
+    "footer.text": "Казахский войлок ручной работы",
+  },
+  // названия товаров для сообщения в WhatsApp на русском
+  productsRu: {
+    "Текемет": "Текемет",
+    "Сырмақ": "Сырмак",
+    "Киіз кілемше": "Войлочный коврик",
+    "Киіз тәпішке": "Войлочные тапочки",
+    "Қабырға безендіру": "Декор для стены",
+    "Жеке тапсырыс": "Индивидуальный заказ",
+  },
+};
+
+// тексты интро на казахском, которых нет в HTML (появляются по ходу анимации)
+const KK = {
+  "intro.press.k": "Су сеуіп, басамыз…",
+  "intro.press.t": "Талшықтар бірігуде",
+  "intro.felt.k": "Дәстүрлі қазақ киізі",
+  "intro.felt.t": "Міне, киіз дайын!",
+};
+
+let LANG = "kk";
+const t = (key) => (LANG === "ru" && key in I18N.ru ? I18N.ru[key] : KK[key] ?? "");
+
+function setLang(lang) {
+  LANG = lang === "ru" ? "ru" : "kk";
+  document.documentElement.lang = LANG;
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const k = el.dataset.i18n;
+    if (!(k in KK)) KK[k] = el.innerHTML; // запоминаем казахский оригинал из HTML
+    el.innerHTML = t(k);
+  });
+  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+    const k = el.dataset.i18nAria;
+    const kk = "aria." + k;
+    if (!(kk in KK)) KK[kk] = el.getAttribute("aria-label");
+    el.setAttribute("aria-label", LANG === "ru" ? I18N.ru[k] || KK[kk] : KK[kk]);
+  });
+  const desc = document.querySelector('meta[name="description"]');
+  if (!("meta.title" in KK)) { KK["meta.title"] = document.title; KK["meta.desc"] = desc.content; }
+  document.title = t("meta.title");
+  desc.content = t("meta.desc");
+  document.querySelectorAll("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
+  try { localStorage.setItem("lang", LANG); } catch (e) {}
+  wireContacts();
+}
+
+function initLang() {
+  let saved = "kk";
+  try { saved = localStorage.getItem("lang") || "kk"; } catch (e) {}
+  document.querySelectorAll("[data-lang]").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
+  setLang(saved);
+}
 
 /* ---------- helpers ---------- */
 const $ = (s, r = document) => r.querySelector(s);
@@ -37,8 +182,11 @@ const telHref = (p) => "tel:+" + p.replace(/\D/g, "");
    1. Байланыс сілтемелері
    ========================================================== */
 function wireContacts() {
-  $$("[data-wa]").forEach((a) => (a.href = waLink(CONFIG.waMessage)));
-  $$("[data-wa-product]").forEach((a) => (a.href = waLink(CONFIG.waProductMessage(a.dataset.waProduct))));
+  $$("[data-wa]").forEach((a) => (a.href = waLink(CONFIG.waMessage[LANG])));
+  $$("[data-wa-product]").forEach((a) => {
+    const name = LANG === "ru" ? I18N.productsRu[a.dataset.waProduct] || a.dataset.waProduct : a.dataset.waProduct;
+    a.href = waLink(CONFIG.waProductMessage[LANG](name));
+  });
   $$("[data-phone]").forEach((a) => {
     const p = CONFIG.phones[+a.dataset.phone] || CONFIG.phones[0];
     a.textContent = p;
@@ -250,7 +398,7 @@ function intro() {
     phase = "press";
     pressStart = performance.now();
     root.classList.add("is-pressing");
-    setText("Су сеуіп, басамыз…", "Талшықтар бірігуде");
+    setText(t("intro.press.k"), t("intro.press.t"));
   }
 
   function toFelt() {
@@ -258,7 +406,7 @@ function intro() {
     root.classList.add("is-felt");
     canvas.style.transition = "opacity .9s ease .3s";
     canvas.style.opacity = 0;
-    setText("Дәстүрлі қазақ киізі", "Міне, киіз дайын!");
+    setText(t("intro.felt.k"), t("intro.felt.t"));
     setTimeout(leave, 2600);
   }
 
@@ -533,7 +681,7 @@ function pageUI() {
 }
 
 /* ---------- start ---------- */
-wireContacts();
+initLang();
 renderFelts();
 macroFibers();
 fluffs();

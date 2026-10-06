@@ -452,3 +452,16 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .macro .spin{animation:spin 120s linear infinite;transform-origin:150px 150px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .sheep-inner svg{width:100%;height:auto;overflow:visible}
+
+/* ==========================================================
+   Тіл ауыстырғыш / переключатель языка
+   ========================================================== */
+.lang{display:flex;gap:2px;padding:3px;border-radius:999px;background:rgba(42,33,28,.08);flex-shrink:0}
+.lang button{font:inherit;font-size:12px;font-weight:700;letter-spacing:.04em;padding:6px 10px;border:0;border-radius:999px;background:transparent;color:var(--ink-2);cursor:pointer;transition:background .2s,color .2s}
+.lang button:hover{color:var(--ink)}
+.lang button[aria-pressed="true"]{background:var(--red);color:#fff}
+.lang-intro{position:absolute;top:18px;left:18px;z-index:5;background:rgba(255,255,255,.55)}
+@media (max-width:760px){
+  .header .lang{margin-left:auto}
+  .header .burger{margin-left:8px}
+}
