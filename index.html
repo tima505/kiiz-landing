@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ақ Киіз — қолдан басылған қазақ киізі</title>
+  <meta name="description" content="Таза қой жүнінен қолмен басылған киіз бұйымдар: текемет, сырмақ, кілемше, тәпішке. Тапсырыс WhatsApp арқылы.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-intro">
+
+  <!-- ============ INTRO: жүн → киіз ============ -->
+  <div class="intro" id="intro" aria-hidden="false">
+    <canvas id="woolCanvas"></canvas>
+
+    <svg class="intro-felt" id="introFelt" viewBox="0 0 400 260" aria-hidden="true">
+      <defs>
+        <filter id="feltNoise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="4" result="n"/>
+          <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+          <feComponentTransfer in="g" result="a"><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+          <feComposite in="a" in2="SourceGraphic" operator="in" result="t"/>
+          <feBlend in="SourceGraphic" in2="t" mode="multiply"/>
+        </filter>
+      </defs>
+      <rect x="6" y="6" width="388" height="248" rx="14" fill="#a3271f" filter="url(#feltNoise)"/>
+      <rect x="22" y="22" width="356" height="216" rx="8" fill="none" stroke="#f3ead8" stroke-width="5" class="draw"/>
+      <g class="draw" fill="none" stroke="#f3ead8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <!-- орталық қошқар мүйіз -->
+        <path d="M200 190 V120 C200 88 168 74 148 90 C132 103 142 126 160 120 C172 116 170 102 160 102"/>
+        <path d="M200 120 C200 88 232 74 252 90 C268 103 258 126 240 120 C228 116 230 102 240 102"/>
+        <path d="M200 140 C185 160 160 160 150 176 M200 140 C215 160 240 160 250 176"/>
+        <!-- бұрыштар -->
+        <path d="M40 60 C40 40 64 40 64 58 C64 70 50 70 50 60"/>
+        <path d="M360 60 C360 40 336 40 336 58 C336 70 350 70 350 60"/>
+        <path d="M40 200 C40 220 64 220 64 202 C64 190 50 190 50 200"/>
+        <path d="M360 200 C360 220 336 220 336 202 C336 190 350 190 350 200"/>
+      </g>
+      <g class="draw" fill="none" stroke="#c8902e" stroke-width="4" stroke-linecap="round">
+        <path d="M90 130 h40 M270 130 h40"/>
+        <path d="M110 110 v40 M290 110 v40"/>
+      </g>
+    </svg>
+
+    <div class="intro-text">
+      <p class="intro-kicker" id="introKicker">Бір уыс жүн…</p>
+      <h1 class="intro-title" id="introTitle">Жүннен — киізге</h1>
+      <button class="intro-btn" id="introBtn" type="button">
+        <span>Басу</span>
+        <small>немесе күте тұрыңыз</small>
+      </button>
+    </div>
+    <button class="intro-skip" id="introSkip" type="button">Өткізіп жіберу →</button>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><use href="#orn-horn"/></svg>
+        <span>Ақ Киіз</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about">Киіз туралы</a>
+        <a href="#process">Қалай жасалады</a>
+        <a href="#products">Бұйымдар</a>
+        <a href="#contact">Байланыс</a>
+      </nav>
+      <a class="btn btn-wa btn-sm header-cta" data-wa href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
+        WhatsApp
+      </a>
+      <button class="burger" id="burger" aria-label="Мәзір"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-sky">
+        <div class="sun"></div>
+        <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+        <div class="fluffs" id="fluffs"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Үй жағдайында · қолмен · таза жүннен</p>
+          <h2 class="hero-title reveal">Ата-бабадан қалған <em>киіз басу</em> өнері — сіздің үйіңізде</h2>
+          <p class="hero-sub reveal">Әр киіз таза қой жүнінен дәстүрлі тәсілмен басылады. Жылы, табиғи, ұзаққа шыдайды — және әрқайсысы бірегей.</p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
+              WhatsApp-қа жазу
+            </a>
+            <a class="btn btn-ghost" href="#products">Бұйымдарды көру</a>
+          </div>
+          <a class="hero-phone reveal" data-phone="0" href="#">+7 (700) 000-00-00</a>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="felt-card" id="heroFelt">
+            <div class="felt-pattern" data-pattern="red"></div>
+            <span class="felt-tag">Текемет · 100% жүн</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Жайылым мен қозылар -->
+      <div class="pasture" aria-hidden="true">
+        <svg class="hills" viewBox="0 0 1440 200" preserveAspectRatio="none">
+          <path d="M0 120 C200 60 380 70 560 110 C760 150 900 70 1100 80 C1260 90 1360 120 1440 100 V200 H0Z" fill="var(--hill-2)"/>
+          <path d="M0 150 C240 110 420 130 640 150 C860 170 1040 120 1240 130 C1340 136 1400 150 1440 145 V200 H0Z" fill="var(--hill-1)"/>
+        </svg>
+        <div class="flock" id="flock"></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p class="eyebrow reveal">Киіз деген не?</p>
+          <h2 class="section-title reveal">Жүн талшықтары бір-біріне <em>жабысқанша</em> басылған тығыз мата</h2>
+          <p class="reveal">Киіз — жүннен арнайы тәсілмен алынатын тығыз материал. Жүнді жайып, ылғалдап, талшықтар өзара жабысып, біртұтас болғанша басады.</p>
+          <p class="reveal">Киіз басу — қазақтың ежелгі қолөнері. Ол киіз үйдің жабуы да, төсеніш те, жылы киім де болған. Біз сол дәстүрді сақтап, бүгінгі үйге лайық бұйымдар жасаймыз.</p>
+          <ul class="facts reveal">
+            <li><b>100%</b><span>табиғи қой жүні</span></li>
+            <li><b>Қолмен</b><span>әр бұйым үйде жасалады</span></li>
+            <li><b>Бірегей</b><span>екі бірдей өрнек жоқ</span></li>
+          </ul>
+        </div>
+        <div class="about-art reveal">
+          <div class="macro">
+            <svg viewBox="0 0 300 300" id="macroFibers" aria-hidden="true"></svg>
+            <span class="macro-label">Жүн талшықтары жақыннан</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process">
+      <div class="container">
+        <p class="eyebrow reveal center">Қалай жасалады</p>
+        <h2 class="section-title reveal center">Бес қадам: жүннен киізге дейін</h2>
+
+        <ol class="steps" id="steps">
+          <span class="steps-line"><span class="steps-fill" id="stepsFill"></span></span>
+          <li class="step reveal">
+            <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-1"/></svg></div>
+            <span class="step-n">01</span>
+            <h3>Жүнді сабау</h3>
+            <p>Жуылған жүнді сабаумен сабап, қопсытамыз — талшықтар жеңіл әрі біркелкі болады.</p>
+          </li>
+          <li class="step reveal">
+            <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-2"/></svg></div>
+            <span class="step-n">02</span>
+            <h3>Шиге жаю</h3>
+            <p>Шиге жүнді қабат-қабат жайып, түрлі түсті жүннен өрнек саламыз.</p>
+          </li>
+          <li class="step reveal">
+            <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-3"/></svg></div>
+            <span class="step-n">03</span>
+            <h3>Ыстық су себу</h3>
+            <p>Жүнді ыстық сумен ылғалдаймыз — талшықтар жұмсарып, бір-біріне ілінісе бастайды.</p>
+          </li>
+          <li class="step reveal">
+            <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-4"/></svg></div>
+            <span class="step-n">04</span>
+            <h3>Орап, басу</h3>
+            <p>Шиге орап, ұзақ домалатып, тептеп басамыз. Жүн тығыздалып, киізге айналады.</p>
+          </li>
+          <li class="step reveal">
+            <div class="step-ic"><svg viewBox="0 0 64 64"><use href="#st-5"/></svg></div>
+            <span class="step-n">05</span>
+            <h3>Кептіру</h3>
+            <p>Күнге кептіріп, шеттерін тегістейміз. Киіз дайын — ұзақ жылдар қызмет етеді.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS ============ -->
+    <section class="section products" id="products">
+      <div class="container">
+        <p class="eyebrow reveal center">Бұйымдар</p>
+        <h2 class="section-title reveal center">Үйіңізге жылулық пен дәстүр</h2>
+        <p class="section-lead reveal center">Өлшемі, түсі мен өрнегі тапсырыс бойынша. Бағасын WhatsApp-та нақтылаймыз.</p>
+
+        <div class="grid" id="productGrid">
+          <article class="card reveal">
+            <div class="card-art"><div class="felt-pattern" data-pattern="red"></div></div>
+            <div class="card-body">
+              <h3>Текемет</h3>
+              <p>Өрнегі басылып салынған үлкен киіз кілем. Еденге, төрге жарасады.</p>
+              <a class="card-link" data-wa-product="Текемет" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card-art"><div class="felt-pattern" data-pattern="blue"></div></div>
+            <div class="card-body">
+              <h3>Сырмақ</h3>
+              <p>Ою-өрнегі қиылып, тігіліп жасалған сәнді киіз. Ұзаққа шыдайды.</p>
+              <a class="card-link" data-wa-product="Сырмақ" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card-art"><div class="felt-pattern" data-pattern="ochre"></div></div>
+            <div class="card-body">
+              <h3>Киіз кілемше</h3>
+              <p>Кіреберіске, балалар бөлмесіне, намазға арналған шағын төсеніш.</p>
+              <a class="card-link" data-wa-product="Киіз кілемше" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card-art"><div class="felt-pattern" data-pattern="cream"></div></div>
+            <div class="card-body">
+              <h3>Киіз тәпішке</h3>
+              <p>Үйде киетін жылы, жеңіл аяқ киім. Аяқты суықтан сақтайды.</p>
+              <a class="card-link" data-wa-product="Киіз тәпішке" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card-art"><div class="felt-pattern" data-pattern="dark"></div></div>
+            <div class="card-body">
+              <h3>Қабырға безендіру</h3>
+              <p>Ою-өрнекті киіз панно — қонақ бөлмеге ұлттық нақыш береді.</p>
+              <a class="card-link" data-wa-product="Қабырға безендіру" href="#" target="_blank" rel="noopener">Тапсырыс беру →</a>
+            </div>
+          </article>
+          <article class="card card-custom reveal">
+            <div class="card-body">
+              <svg class="card-custom-ic" viewBox="0 0 40 40" aria-hidden="true"><use href="#orn-horn"/></svg>
+              <h3>Өз идеяңыз бойынша</h3>
+              <p>Өлшемін, түсін, өрнегін айтыңыз — сіз үшін арнайы басып береміз. Сыйлыққа да таптырмайды.</p>
+              <a class="btn btn-wa" data-wa-product="Жеке тапсырыс" href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
+                Идеяны жіберу
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY ============ -->
+    <section class="section why">
+      <div class="container why-grid">
+        <div class="why-item reveal"><span class="why-n">01</span><h3>Табиғи</h3><p>Тек таза қой жүні, химиясыз.</p></div>
+        <div class="why-item reveal"><span class="why-n">02</span><h3>Жылы</h3><p>Жылуды жақсы сақтайды, еденнен суық өткізбейді.</p></div>
+        <div class="why-item reveal"><span class="why-n">03</span><h3>Берік</h3><p>Дұрыс күтімде ондаған жыл қызмет етеді.</p></div>
+        <div class="why-item reveal"><span class="why-n">04</span><h3>Бірегей</h3><p>Әр бұйым қолмен жасалады, қайталанбайды.</p></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-copy">
+            <p class="eyebrow light">Байланыс</p>
+            <h2 class="section-title light">Тапсырыс беру оңай</h2>
+            <p>WhatsApp-қа жазыңыз немесе қоңырау шалыңыз. Өлшемі, түсі, мерзімі мен бағасын бірге келісеміз. Қазақстан бойынша жеткізу бар.</p>
+            <ul class="phones" id="phones"></ul>
+            <a class="btn btn-wa btn-lg" data-wa href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
+              WhatsApp арқылы жазу
+            </a>
+          </div>
+          <div class="contact-art" aria-hidden="true">
+            <div class="felt-pattern" data-pattern="cream-on-red"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-flock" id="footerFlock" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <span class="logo">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><use href="#orn-horn"/></svg>
+        <span>Ақ Киіз</span>
+      </span>
+      <p>Қолдан басылған қазақ киізі · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <!-- Қалқымалы WhatsApp батырмасы -->
+  <a class="wa-float" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp-қа жазу">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
+  </a>
+
+  <!-- ============ SVG sprite ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="orn-horn" viewBox="0 0 40 40">
+        <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+          <path d="M20 36 V20 C20 10 10 6 5 11 C1 15 4 21 9 19 C12 18 11 14 8 14"/>
+          <path d="M20 20 C20 10 30 6 35 11 C39 15 36 21 31 19 C28 18 29 14 32 14"/>
+          <path d="M20 27 C15 30 12 30 9 33 M20 27 C25 30 28 30 31 33"/>
+        </g>
+      </symbol>
+      <symbol id="ic-chat" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/>
+        <path fill="currentColor" d="M9.2 7.6c.3 0 .5.1.6.4l.7 1.7c.1.3 0 .5-.1.7l-.5.6c-.1.1-.1.3 0 .5.6 1.1 1.5 2 2.6 2.6.2.1.4.1.5 0l.6-.6c.2-.2.4-.2.7-.1l1.7.7c.3.1.4.4.4.6v.9c0 .8-.7 1.4-1.5 1.4A7.2 7.2 0 0 1 7.8 9.1c0-.8.6-1.5 1.4-1.5Z"/>
+      </symbol>
+      <!-- қадам иконкалары -->
+      <symbol id="st-1" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M10 50 L40 14"/><path d="M18 52 L48 16"/><circle cx="44" cy="44" r="6"/><circle cx="52" cy="36" r="5"/><circle cx="36" cy="52" r="5"/></g></symbol>
+      <symbol id="st-2" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="8" y="16" width="48" height="32" rx="3"/><path d="M14 16v32M22 16v32M30 16v32M38 16v32M46 16v32"/><path d="M24 32c0-6 8-6 8 0 0-6 8-6 8 0" stroke-width="3.5"/></g></symbol>
+      <symbol id="st-3" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8 C24 20 18 28 18 36 a14 14 0 0 0 28 0 C46 28 40 20 32 8Z"/><path d="M26 38 a6 6 0 0 0 6 6"/></g></symbol>
+      <symbol id="st-4" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="32" cy="34" r="16"/><path d="M32 34 m0 -10 a10 10 0 1 1 -10 10 a6 6 0 1 1 6 6"/><path d="M8 54h48"/></g></symbol>
+      <symbol id="st-5" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="32" cy="22" r="8"/><path d="M32 6v4M32 34v4M16 22h4M44 22h4M21 11l3 3M43 11l-3 3"/><path d="M8 44h48"/><rect x="14" y="44" width="36" height="12" rx="2"/></g></symbol>
+    </defs>
+  </svg>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
